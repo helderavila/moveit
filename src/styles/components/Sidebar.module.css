@@ -1,0 +1,40 @@
+.container {
+  position: absolute;
+  height: 100vh;
+  width: 112px;
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.container nav ul li {
+  width: 112px;
+  height: 4rem;
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container nav ul li svg:hover path {
+  stroke: var(--blue);
+}
+
+.container nav ul li svg:hover g {
+  opacity: 1;
+}
+
+.active svg path {
+  stroke: var(--blue);
+}
+
+.active svg g {
+  opacity: 1;
+}

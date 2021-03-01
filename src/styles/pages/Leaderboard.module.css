@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-size: 2rem;
+  color: var(--title);
+}
+
+.container table {
+  margin-top: 2rem;
+}
+
+.container table thead {
+  text-align: left;
+}
+
+.container table thead th {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.container table thead tr th:nth-child(2) {
+  width: 45rem;
+  padding-left: 1rem;
+}
+
+.container table tbody tr {
+  height: 5rem;
+  background-color: var(--white);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+}
+
+.container table thead tr th:nth-child(1) {
+  width: 72px;
+}
