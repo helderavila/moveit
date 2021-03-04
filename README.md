@@ -30,7 +30,7 @@
   <h3 align="center">Moveit</h3>
 
   <p align="center">
-    Moveit é uma aplicação que une o método de pomodoro com exercícios físicos.
+    Moveit é uma aplicação gameficada que tem como objetivo ajudar na saúde de desenvolvedores que passam horas sentados em frente ao computador.
     <br />
     <a href="https://github.com/helderavila/moveit"><strong>Documentação</strong></a>
     <br />
