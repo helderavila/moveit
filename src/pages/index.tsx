@@ -12,7 +12,6 @@ import { ChallengeBox } from '../components/ChallengeBox'
 import { CountdownProvider } from '../contexts/CountdownContext'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
 
-
 // Styles
 import styles from '../styles/pages/Home.module.css'
 
@@ -20,6 +19,7 @@ interface DashboardProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
+  currentTheme: 'light' | 'dark'
 }
 
 export default function Dashboard(props: DashboardProps) {
@@ -29,24 +29,24 @@ export default function Dashboard(props: DashboardProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-        <div className={styles.container}>
-          <Head>
-            <title>Início | moveit</title>
-          </Head>
-          <ExperienceBar />
-          <CountdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </CountdownProvider>
-      </div>
+          <div className={styles.container}>
+            <Head>
+              <title>Início | moveit</title>
+            </Head>
+            <ExperienceBar />
+            <CountdownProvider>
+              <section>
+                <div>
+                  <Profile />
+                  <CompletedChallenges />
+                  <Countdown />
+                </div>
+                <div>
+                  <ChallengeBox />
+                </div>
+              </section>
+            </CountdownProvider>
+        </div>
     </ChallengesProvider>
   )
 }
@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     props: {
       level: Number(level),
       currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
+      challengesCompleted: Number(challengesCompleted),
     }
   }
 }
